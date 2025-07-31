@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iryna Valchak | IT English Specialist & Full-stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#211AFF',
+                        secondary: '#6C63FF',
+                        dark: '#1A1A2E',
+                        light: '#F5F7FA',
+                        accent: '#FF6584',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in': 'fadeIn 1s ease-in',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #211AFF 0%, #6C63FF 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #211AFF 0%, #6C63FF 100%);
+        }
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .language-switcher {
+            position: relative;
+            display: inline-block;
+        }
+        .language-dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .language-switcher:hover .language-dropdown {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+        .language-option {
+            padding: 8px 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: all 0.2s ease;
+        }
+        .language-option:hover {
+            background-color: #f1f1f1;
+        }
+        .language-flag {
+            width: 20px;
+            height: 15px;
+            margin-right: 8px;
+            border-radius: 2px;
+        }
+        .hero-pattern {
+            background-image: radial-gradient(#6C63FF20 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .shape-blob {
+            background: linear-gradient(135deg, #211AFF 0%, #6C63FF 100%);
+            height: 200px;
+            width: 200px;
+            border-radius: 30% 50% 20% 40%;
+            opacity: 0.1;
+            position: absolute;
+            transform: rotate(-20deg);
+            filter: blur(10px);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #211AFF;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #211AFF 0%, #6C63FF 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(33, 26, 255, 0.2);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px rgba(33, 26, 255, 0.3);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 4px;
+            bottom: -10px;
+            left: 20%;
+            background: linear-gradient(90deg, #211AFF 0%, #6C63FF 100%);
+            border-radius: 2px;
+        }
+        .course-tag {
+            background: linear-gradient(135deg, #211AFF20 0%, #6C63FF20 100%);
+            border: 1px solid #211AFF30;
+        }
+        .floating-shape {
+            animation: float 6s ease-in-out infinite;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+    </style>
+</head>
+<body class="font-sans bg-light text-dark antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50 backdrop-blur-sm bg-opacity-80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold gradient-text font-display">Vary IT English</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-dark hover:text-primary font-medium" data-i18n="nav.home">Головна</a>
+                    <a href="#about" class="nav-link text-dark hover:text-primary font-medium" data-i18n="nav.about">Про мене</a>
+                    <a href="#courses" class="nav-link text-dark hover:text-primary font-medium" data-i18n="nav.courses">Курси</a>
+                    <a href="#testimonials" class="nav-link text-dark hover:text-primary font-medium" data-i18n="nav.testimonials">Відгуки</a>
+                    <a href="#contact" class="px-5 py-2 btn-primary text-white rounded-full font-medium" data-i18n="nav.contact">Контакти</a>
+                    <div class="language-switcher">
+                        <button class="flex items-center text-dark hover:text-primary">
+                            <img src="https://flagcdn.com/w20/ua.png" alt="Ukrainian" class="language-flag">
+                            <span class="ml-1">UA</span>
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="language-dropdown">
+                            <div class="language-option" onclick="changeLanguage('en')">
+                                <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag">
+                                <span>EN</span>
+                            </div>
+                            <div class="language-option" onclick="changeLanguage('uk')">
+                                <img src="https://flagcdn.com/w20/ua.png" alt="Ukrainian" class="language-flag">
+                                <span>UA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-dark hover:text-primary">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-primary" data-i18n="nav.home">Головна</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-dark hover:text-primary" data-i18n="nav.about">Про мене</a>
+                <a href="#courses" class="block px-3 py-2 rounded-md text-base font-medium text-dark hover:text-primary" data-i18n="nav.courses">Курси</a>
+                <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium text-dark hover:text-primary" data-i18n="nav.testimonials">Відгуки</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white btn-primary" data-i18n="nav.contact">Контакти</a>
+                <div class="pt-2">
+                    <div class="flex space-x-4">
+                        <button onclick="changeLanguage('en')" class="flex items-center px-3 py-1 rounded-full bg-gray-100">
+                            <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag">
+                            <span class="ml-1">EN</span>
+                        </button>
+                        <button onclick="changeLanguage('uk')" class="flex items-center px-3 py-1 rounded-full bg-gray-100">
+                            <img src="https://flagcdn.com/w20/ua.png" alt="Ukrainian" class="language-flag">
+                            <span class="ml-1">UA</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-20 hero-pattern relative overflow-hidden">
+        <div class="shape-blob floating-shape -top-20 -left-20"></div>
+        <div class="shape-blob floating-shape top-1/2 right-0 animation-delay-2000"></div>
+        <div class="shape-blob floating-shape bottom-10 left-1/3 animation-delay-4000"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="lg:w-1/2 fade-in">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6 font-display">
+                        <span class="gradient-text" data-i18n="hero.title1">Vary IT English</span> — <span class="text-dark" data-i18n="hero.title2">Навчіться реальній IT англійській від розробника програмного забезпечення</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8" data-i18n="hero.subtitle">
+                        Персоналізовані курси англійської для IT-фахівців, розроблені розробником для розробників
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#courses"
+                            class="px-8 py-3 btn-primary text-white rounded-full hover:shadow-lg transition text-center font-medium text-lg"
+                            data-i18n="hero.button">
+                            Записатись на урок
+                        </a>
+                        <a href="#about" class="px-8 py-3 border-2 border-primary text-primary rounded-full hover:bg-primary hover:text-white transition text-center font-medium text-lg"
+                            data-i18n="hero.learn">
+                            Дізнатись більше
+                        </a>
+                    </div>
+                    <!-- <div class="mt-10 flex items-center space-x-6">
+                        <div class="flex -space-x-2">
+                            <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/12.jpg" alt="">
+                            <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
+                            <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/45.jpg" alt="">
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600" data-i18n="hero.students">
+                                <span class="font-bold text-primary">250+</span> студентів вже покращили свої навички
+                            </p>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="lg:w-1/2 mt-12 lg:mt-0 flex justify-center fade-in">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform rotate-3 hover:rotate-0 transition duration-500">
+                        <img src="img/logo.jpg" alt="Vary IT English" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-light p-8 rounded-xl hover:shadow-lg transition">
+                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-laptop-code text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="features.1.title"></h3>
+                    <p class="text-gray-600" data-i18n="features.1.text">
+                    </p>
+                </div>
+                <div class="bg-light p-8 rounded-xl hover:shadow-lg transition">
+                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-comments text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="features.2.title"></h3>
+                    <p class="text-gray-600" data-i18n="features.2.text">
+                    </p>
+                </div>
+                <div class="bg-light p-8 rounded-xl hover:shadow-lg transition">
+                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-user-tie text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="features.3.title"></h3>
+                    <p class="text-gray-600" data-i18n="features.3.text">
+                    </p>
+                </div>
+                <div class="bg-light p-8 rounded-xl hover:shadow-lg transition">
+                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-user-tie text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="features.4.title"></h3>
+                    <p class="text-gray-600" data-i18n="features.4.text">   
+                    </p>
+                </div>
+                <div class="bg-light p-8 rounded-xl hover:shadow-lg transition">
+                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-user-tie text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="features.5.title"></h3>
+                    <p class="text-gray-600" data-i18n="features.5.text">   
+                    </p>
+                </div>
+                <div class="bg-light p-8 rounded-xl hover:shadow-lg transition">
+                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-user-tie text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="features.6.title"></h3>
+                    <p class="text-gray-600" data-i18n="features.6.text">   
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold section-title inline-block" data-i18n="about.title">Про Ірину Вальчак</h2>
+            </div>
+            <div class="lg:flex lg:items-center lg:space-x-12">
+                <div class="lg:w-2/5 mb-12 lg:mb-0 flex justify-center relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-xl border-4 border-white transform -rotate-3 hover:rotate-0 transition duration-500">
+                        <img src="img/profile.jpg" alt="Iryna Valchak" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-md border border-gray-100">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white mr-3">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-dark">5+ років</p>
+                                <p class="text-sm text-gray-600" data-i18n="about.experience">Досвіду викладання</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-3/5">
+                    <h3 class="text-2xl font-semibold text-dark mb-6 font-display" data-i18n="about.subtitle">Засновниця Vary IT English</h3>
+                    <p class="text-gray-600 mb-6" data-i18n="about.text1">
+                        Ірина Вальчак поєднує свій досвід full-stack розробниці та спеціалістки з мов, щоб створювати практичні програми з англійської спеціально для IT-фахівців.
+                    </p>
+                    <p class="text-gray-600 mb-6" data-i18n="about.text2">
+                        Її курси зосереджені на реальних IT-ситуаціях, від технічних співбесід до щоденних стендапів, допомагаючи розробникам ефективно спілкуватися в міжнародних командах.
+                    </p>
+                    <p class="text-gray-600 mb-8" data-i18n="about.text3">
+                        Маючи досвід у комп'ютерних науках та викладанні мов, Ірина розуміє унікальні виклики, з якими стикаються технічні фахівці при роботі англійською.
+                    </p>
+                    
+                    <div class="mb-8">
+                        <h4 class="font-bold text-dark mb-4" data-i18n="about.skills">Навички та кваліфікації</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center bg-white p-3 rounded-lg border border-gray-100">
+                                <div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mr-3">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <span class="text-gray-700" data-i18n="about.skill1">Full-stack розробниця</span>
+                            </div>
+                            <div class="flex items-center bg-white p-3 rounded-lg border border-gray-100">
+                                <div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mr-3">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <span class="text-gray-700" data-i18n="about.skill2">Сертифікований викладач</span>
+                            </div>
+                            <div class="flex items-center bg-white p-3 rounded-lg border border-gray-100">
+                                <div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mr-3">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <span class="text-gray-700" data-i18n="about.skill3">Ментор 100+ студентів</span>
+                            </div>
+                            <div class="flex items-center bg-white p-3 rounded-lg border border-gray-100">
+                                <div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mr-3">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <span class="text-gray-700" data-i18n="about.skill4">IT комунікаційний експерт</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#courses" class="inline-flex items-center px-6 py-3 btn-primary text-white rounded-full hover:shadow-lg transition font-medium">
+                        <span data-i18n="about.button">Переглянути курси</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold section-title inline-block" data-i18n="courses.title">Курси IT англійської</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mt-6" data-i18n="courses.subtitle">
+                    Спеціалізовані курси, розроблені для допомоги розробникам та IT-фахівцям ефективно спілкуватися англійською
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Course 1 -->
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-100 hover:border-primary">
+                    <div class="h-3 gradient-bg"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-dark" data-i18n="courses.course1.title">Підготовка до співбесіди</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6" data-i18n="courses.course1.description">
+                            Імітація технічних співбесід з детальним зворотнім зв'язком про ваші комунікативні навички англійською, технічну лексику та методи співбесіди.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-3"></i>
+                                <span class="text-gray-700" data-i18n="courses.course1.feature1">Персоналізований зворотній зв'язок</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-3"></i>
+                                <span class="text-gray-700" data-i18n="courses.course1.feature2">Поширені питання на IT співбесідах</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-3"></i>
+                                <span class="text-gray-700" data-i18n="courses.course1.feature3">Практика технічної лексики</span>
+                            </li>
+                        </ul>
+                        <div class="mb-6">
+                            <span class="course-tag text-primary px-4 py-1 rounded-full text-sm font-medium" data-i18n="courses.course1.price">$60/год</span>
+                        </div>
+                        <a href="#contact" class="block w-full text-center px-4 py-3 btn-primary text-white rounded-full hover:shadow-lg transition" data-i18n="courses.button">
+                            Записатись
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-100 hover:border-primary">
+                    <div class="h-3 bg-secondary"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-dark" data-i18n="courses.course2.title">5-денний IT English Інтенсив</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6" data-i18n="courses.course2.description">
+                            Прискорте свої навички IT англійської з цим комплексним курсом, який охоплює документацію, зустрічі, листи та технічні обговорення.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-3"></i>
+                                <span class="text-gray-700" data-i18n="courses.course2.feature1">Щоденні 90-хвилинні сесії</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-3"></i>
+                                <span class="text-gray-700" data-i18n="courses.course2.feature2">Практичні вправи</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-3"></i>
+                                <span class="text-gray-700" data-i18n="courses.course2.feature3">Мала група (до 4 студентів)</span>
+                            </li>
+                        </ul>
+                        <div class="mb-6">
+                            <span class="course-tag text-primary px-4 py-1 rounded-full text-sm font-medium" data-i18n="courses.course2.price">$99 (за щоденні зустрічі)</span>
+                        </div>
+                        <a href="#contact" class="block w-full text-center px-4 py-3 btn-primary text-white rounded-full hover:shadow-lg transition" data-i18n="courses.button">
+                            Записатись
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-100 hover:border-primary">
+                    <div class="h-3 bg-accent"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-dark" data-i18n="courses.course3.title">Уроки IT англійської</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6" data-i18n="courses.course3.description">
+                            Індивідуальні заняття, орієнтовані на ваші конкретні потреби - документація, презентації або технічне письмо.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-3"></i>
+                                <span class="text-gray-700" data-i18n="courses.course3.feature1">Адаптовано до вашого рівня</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-3"></i>
+                                <span class="text-gray-700" data-i18n="courses.course3.feature2">Гнучкий графік</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-3"></i>
+                                <span class="text-gray-700" data-i18n="courses.course3.feature3">Матеріали з реального досвіду</span>
+                            </li>
+                        </ul>
+                        <div class="mb-6">
+                            <span class="course-tag text-primary px-4 py-1 rounded-full text-sm font-medium" data-i18n="courses.course3.price">$30/год</span>
+                        </div>
+                        <a href="#contact" class="block w-full text-center px-4 py-3 btn-primary text-white rounded-full hover:shadow-lg transition" data-i18n="courses.button">
+                            Записатись
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-100 hover:border-primary">
+                    <div class="h-3 bg-purple-500"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-dark" data-i18n="courses.course4.title">Розмовна англійська</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6" data-i18n="courses.course4.description">
+                            Покращіть свою плавність і впевненість у повсякденних робочих розмовах, стендапах і командних обговореннях.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-3"></i>
+                                <span class="text-gray-700" data-i18n="courses.course4.feature1">Практика природного мовлення</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-3"></i>
+                                <span class="text-gray-700" data-i18n="courses.course4.feature2">Ідіоми та сленг</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-3"></i>
+                                <span class="text-gray-700" data-i18n="courses.course4.feature3">Культурний контекст</span>
+                            </li>
+                        </ul>
+                        <div class="mb-6">
+                            <span class="course-tag text-primary px-4 py-1 rounded-full text-sm font-medium" data-i18n="courses.course4.price">$25/год</span>
+                        </div>
+                        <a href="#contact" class="block w-full text-center px-4 py-3 btn-primary text-white rounded-full hover:shadow-lg transition" data-i18n="courses.button">
+                            Записатись
+                        </a>
+                    </div>
+                </div>
+                <!-- Course 5 -->
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 border border-gray-100 hover:border-primary">
+                    <div class="h-3 bg-purple-500"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-dark" data-i18n="courses.course5.title"></h3>
+                        </div>
+                        <p class="text-gray-600 mb-6" data-i18n="courses.course5.description">
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-3"></i>
+                                <span class="text-gray-700" data-i18n="courses.course5.feature1"></span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-3"></i>
+                                <span class="text-gray-700" data-i18n="courses.course5.feature2"></span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-3"></i>
+                                <span class="text-gray-700" data-i18n="courses.course5.feature3"></span>
+                            </li>
+                        </ul>
+                        <div class="mb-6">
+                            <span class="course-tag text-primary px-4 py-1 rounded-full text-sm font-medium" data-i18n="courses.course5.price">$25/год</span>
+                        </div>
+                        <a href="#contact" class="block w-full text-center px-4 py-3 btn-primary text-white rounded-full hover:shadow-lg transition" data-i18n="courses.button">
+                            Записатись
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            
+            
+            <div class="mt-16 text-center">
+                <a href="https://t.me/iryna_valchak" class="inline-flex items-center px-8 py-4 btn-primary text-white rounded-full hover:shadow-lg transition font-medium text-lg">
+                    <span data-i18n="courses.cta">Отримати консультацію</span>
+                    <i class="fas fa-arrow-right ml-3"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-4xl font-bold mb-2 font-display">5+</div>
+                    <div class="text-lg" data-i18n="stats.students">Студентів</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold mb-2 font-display">5+</div>
+                    <div class="text-lg" data-i18n="stats.years">Років досвіду</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold mb-2 font-display">98%</div>
+                    <div class="text-lg" data-i18n="stats.success">Розмовної практики</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold mb-2 font-display">100%</div>
+                    <div class="text-lg" data-i18n="stats.satisfaction">Задоволених клієнтів</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold section-title inline-block" data-i18n="testimonials.title">Що кажуть мої студенти</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mt-6" data-i18n="testimonials.subtitle">
+                    Відгуки реальних студентів, які вже покращили свої навички IT англійської
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Олексій К." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-dark">Олексій К.</h4>
+                            <p class="text-gray-600 text-sm" data-i18n="testimonials.testimonial1.position">Старший розробник в TechCorp</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6" data-i18n="testimonials.testimonial1.text">
+                        "Імітація співбесіди з Іриною допомогла мені отримати роботу мрії в міжнародній компанії. Її зворотній зв'язок щодо моїх технічних пояснень був безцінним. Я перейшов від проблем з вираженням ідей до впевненого обговорення складних систем англійською."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Марія С." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-dark">Марія С.</h4>
+                            <p class="text-gray-600 text-sm" data-i18n="testimonials.testimonial2.position">Молодший розробник</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6" data-i18n="testimonials.testimonial2.text">
+                        "5-денний Інтенсив був саме тим, що мені потрібно для підвищення впевненості на командних зустрічах. Ірина розуміє конкретну лексику, яка потрібна розробникам, і створює реалістичні сценарії для практики. Мої колеги вже помітили мої покращення!"
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Давид Л." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-dark">Давид Л.</h4>
+                            <p class="text-gray-600 text-sm" data-i18n="testimonials.testimonial3.position">Тімлід в DevSoft</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6" data-i18n="testimonials.testimonial3.text">
+                        "Як не-носій англійської, який керує міжнародною командою, я стикався з труднощами у чіткій комунікації. Індивідуальні заняття з Іриною допомогли мені вдосконалити мої листи, стендапи та індивідуальні зустрічі. Її технічний досвід означає, що вона розуміє саме те, що потрібно розробникам."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold section-title inline-block" data-i18n="calendar.title">Запишіться на урок</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mt-6" data-i18n="calendar.subtitle">
+                    Заплануйте ваш безкоштовний оціночний урок або сесії курсу напряму
+                </p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2OT735Esz4UArz1TT_Dc5Y-32vhDgA0yCWy_ppKDf6kOg_xNpfx3EIA5lIPNb1WV7u0JTFczch"
+                         width="100%"
+                         height="600"
+                         frameborder="0"
+                         style="border:0; border-radius: 8px;">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <h2 class="text-3xl font-bold mb-6 font-display" data-i18n="contact.title">Готові покращити свою IT англійську?</h2>
+                    <p class="text-lg text-blue-100 mb-8" data-i18n="contact.subtitle">
+                        Зв'яжіться зі мною, щоб обговорити ваші потреби та запланувати перший урок. Я пропоную гнучкий графік для різних часових поясів.
+                    </p>
+                    <div class="space-y-5">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <span class="text-blue-100">varyitenglish@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fas fa-calendar-alt text-xl"></i>
+                            </div>
+                            <span class="text-blue-100" data-i18n="contact.hours">Понеділок - П'ятниця, 9:00 - 22:00 CET</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <span class="text-blue-100" data-i18n="contact.location">Онлайн заняття з будь-якої точки світу</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-xl shadow-2xl h-full">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfM_vy8F6vJbpVrJdVAgMOqyxwLFca6dg-YBNaYInTxnwA0Dw/viewform?embedded=true"
+                                 width="100%"
+                                 height="600"
+                                 frameborder="0"
+                                 marginheight="0"
+                                 marginwidth="0"
+                                style="min-height: 600px; border-radius: 8px;">
+                            Завантаження...
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 font-display">Vary IT English</h3>
+                    <p class="text-gray-400 mb-6" data-i18n="footer.description">
+                        Спеціалістка з IT англійської, яка допомагає розробникам та IT-фахівцям ефективно спілкуватися англійською.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-primary transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-primary transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-primary transition">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider mb-6" data-i18n="footer.links1">Швидкі посилання</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition" data-i18n="nav.home">Головна</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition" data-i18n="nav.about">Про мене</a></li>
+                        <li><a href="#courses" class="text-gray-400 hover:text-white transition" data-i18n="nav.courses">Курси</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition" data-i18n="nav.testimonials">Відгуки</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition" data-i18n="nav.contact">Контакти</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider mb-6" data-i18n="footer.links2">Курси</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#courses" class="text-gray-400 hover:text-white transition" data-i18n="courses.course1.title">Підготовка до співбесіди</a></li>
+                        <li><a href="#courses" class="text-gray-400 hover:text-white transition" data-i18n="courses.course2.title">5-денний Інтенсив</a></li>
+                        <li><a href="#courses" class="text-gray-400 hover:text-white transition" data-i18n="courses.course3.title">Уроки IT англійської</a></li>
+                        <li><a href="#courses" class="text-gray-400 hover:text-white transition" data-i18n="courses.course4.title">Розмовна англійська</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider mb-6" data-i18n="footer.links3">Контакти</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-gray-400 mr-3"></i>
+                            <span class="text-gray-400">varyitenglish@gmail.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-gray-400 mr-3"></i>
+                            <span class="text-gray-400">+380 66 028 3611</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-gray-400 mr-3"></i>
+                            <span class="text-gray-400" data-i18n="footer.location">Онлайн заняття</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-16 pt-8 border-t border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2025 Vary IT English. <span data-i18n="footer.rights">Всі права захищені.</span>
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white text-sm" data-i18n="footer.privacy">Політика конфіденційності</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm" data-i18n="footer.terms">Умови використання</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language translations
+        const translations = {
+            en: {
+                "nav.home": "Home",
+                "nav.about": "About",
+                "nav.courses": "Courses",
+                "nav.testimonials": "Testimonials",
+                "nav.contact": "Contact",
+                "hero.title1": "Vary IT English",
+                "hero.title2": "Learn Real IT English by Software Engineer Program",
+                "hero.subtitle": "Personalized English courses for IT professionals, designed by a developer for developers",
+                "hero.button": "Choose a program",
+                "hero.learn": "Learn more",
+                "hero.students": "<span class='font-bold text-primary'>250+</span> students have already improved their skills",
+                "features.1.title": "Technical Vocabulary",
+                "features.1.text": "Learn specialized terminology used by real developers in international teams",
+                "features.2.title": "Real Scenarios",
+                "features.2.text": "Practice English in the context of daily IT situations: standups, code reviews, interviews",
+                "features.3.title": "Developer Experience",
+                "features.3.text": "Learn from an instructor who has worked in international IT teams and knows real needs",
+                "about.title": "Iryna Valchak",
+                "about.subtitle": "Founder of Vary IT English",
+                "about.text1": "Iryna Valchak combines her experience as a full-stack developer and language specialist to create practical English programs specifically designed for IT professionals.",
+                "about.text2": "Her courses focus on real-world IT scenarios, from technical interviews to daily stand-ups, helping developers communicate effectively in international teams.",
+                "about.text3": "With a background in both computer science and language instruction, Iryna understands the unique challenges tech professionals face when working in English.",
+                "about.skills": "Skills & Qualifications",
+                "about.skill1": "Full-stack Developer",
+                "about.skill2": "Certified Teacher",
+                "about.skill3": "Mentored 100+ students",
+                "about.skill4": "IT Communication Expert",
+                "about.experience": "Years of experience",
+                "about.button": "View courses",
+                "courses.title": "IT English Programs",
+                "courses.subtitle": "Specialized courses designed to help developers and IT professionals communicate effectively in English",
+                "courses.button": "Book Now",
+                "courses.cta": "Get a consultation",
+                "courses.course1.title": "Interview Preparation",
+                "courses.course1.price": "$60/hour",
+                "courses.course1.description": "Mock technical interviews with detailed feedback on your English communication skills, technical vocabulary, and interview techniques.",
+                "courses.course1.feature1": "Personalized feedback",
+                "courses.course1.feature2": "Common IT interview questions",
+                "courses.course1.feature3": "Technical vocabulary practice",
+                "courses.course2.title": "5-Day IT English Intensive",
+                "courses.course2.price": "$99 (for daily meetings)",
+                "courses.course2.description": "Fast-track your IT English skills with this comprehensive course covering documentation, meetings, emails, and technical discussions.",
+                "courses.course2.feature1": "Daily 90-minute sessions",
+                "courses.course2.feature2": "Practical exercises",
+                "courses.course2.feature3": "Small group (max 4 students)",
+                "courses.course3.title": "IT English Lessons",
+                "courses.course3.price": "$30/hour",
+                "courses.course3.description": "Customized one-on-one lessons focusing on your specific needs - documentation, presentations, or technical writing.",
+                "courses.course3.feature1": "Tailored to your level",
+                "courses.course3.feature2": "Flexible scheduling",
+                "courses.course3.feature3": "Real-world materials",
+                "courses.course4.title": "Conversational English",
+                "courses.course4.price": "$25/hour",
+                "courses.course4.description": "Improve your fluency and confidence in casual work conversations, stand-ups, and team discussions.",
+                "courses.course4.feature1": "Natural speaking practice",
+                "courses.course4.feature2": "Idioms and slang",
+                "courses.course4.feature3": "Cultural context",
+                "stats.students": "Students",
+                "stats.years": "Years of experience",
+                "stats.success": "Successful interviews",
+                "stats.satisfaction": "Satisfied clients",
+                "testimonials.title": "What My Students Say",
+                "testimonials.subtitle": "Feedback from real students who have already improved their IT English skills",
+                "testimonials.testimonial1.position": "Senior Developer at TechCorp",
+                "testimonials.testimonial1.text": "\"Iryna's interview simulation helped me land my dream job at an international company. Her feedback on my technical explanations was invaluable. I went from struggling to express my ideas to confidently discussing complex systems in English.\"",
+                "testimonials.testimonial2.position": "Junior Developer",
+                "testimonials.testimonial2.text": "\"The 5-Day Intensive was exactly what I needed to boost my confidence in team meetings. Iryna understands the specific vocabulary developers need and creates realistic practice scenarios. My colleagues have already noticed my improvement!\"",
+                "testimonials.testimonial3.position": "Team Lead at DevSoft",
+                "testimonials.testimonial3.text": "\"As a non-native English speaker leading an international team, I struggled with clear communication. Iryna's tailored lessons helped me refine my emails, stand-ups, and one-on-ones. Her technical background means she understands exactly what developers need to say.\"",
+                "calendar.title": "Book Your Lesson",
+                "calendar.subtitle": "Schedule your free evaluation lesson or course sessions directly",
+                "contact.title": "Ready to Improve Your IT English?",
+                "contact.subtitle": "Contact me to discuss your needs and schedule your first lesson. I offer flexible times to accommodate different time zones.",
+                "contact.hours": "Monday - Friday, 9:00 - 19:00 CET",
+                "contact.location": "Online classes from anywhere in the world",
+                "footer.description": "IT English Specialist helping developers and IT professionals communicate effectively in English.",
+                "footer.links1": "Quick Links",
+                "footer.links2": "Courses",
+                "footer.links3": "Contacts",
+                "footer.location": "Online classes",
+                "footer.rights": "All rights reserved.",
+                "footer.privacy": "Privacy Policy",
+                "footer.terms": "Terms of Service"
+            },
+            uk: {
+                "nav.home": "Головна",
+                "nav.about": "Про мене",
+                "nav.courses": "Курси",
+                "nav.testimonials": "Відгуки",
+                "nav.contact": "Контакти",
+                "hero.title1": "Vary IT English",
+                "hero.title2": "вивчайте реальну IT-англійську від Full-stack Developer",
+                "hero.subtitle": "Персоналізовані курси англійської для IT-фахівців, розроблені розробником для DEVS, PM, Designers",
+                "hero.button": "Обрати програму",
+                "hero.learn": "Дізнатись більше",
+                "hero.students": "<span class='font-bold text-primary'>20+</span> студентів вже покращили свої навички",
+                "features.1.title": "Авторська програма у Figma",
+                "features.1.text": "Вивчайте ІТ-англійську за матеріалами розробленими з нуля, яким немає аналогів.",
+                "features.2.title": "Прототипна граматика",
+                "features.2.text": "Власна методика вивчення граматики за принципами програмування.",
+                "features.3.title": "Досвід розробника",
+                "features.3.text": "ІТ-англійська поєднує не тільки філологічні знання, тому наші програми побудовані Full-stack розробником.",
+                "features.4.title": "98% заняття - розмовна практика",
+                "features.4.text": "Вміння говорити - це першочергова навичка, яку потрібно практикувати постійно.",
+                "features.5.title": "Окремі програми для кожної ІТ-спеціалізації",
+                "features.5.text": "Кожна ІТ-спеціалізація поьребує окремого підходу, адже англійської для PM та Dev - різні речі.",
+                "features.6.title": "Впевненість",
+                "features.6.text": "Допомагаємо прокачати впевненість у розмовній англійській.",
+                "about.title": "Вальчак Ірина",
+                "about.subtitle": "IT English Specialist | Full-stack Developer | Translator and Philologist | Founder of Vary IT English",
+                "about.text1": "Ірина Вальчак поєднує свій досвід full-stack розробниці та спеціалістки з мов, щоб створювати практичні програми з англійської спеціально для IT-фахівців.",
+                "about.text2": "Її курси зосереджені на реальних IT-ситуаціях, від технічних співбесід до щоденних стендапів, допомагаючи розробникам ефективно спілкуватися в міжнародних командах.",
+                "about.text3": "Маючи досвід у комп'ютерних науках та викладанні мов, Ірина розуміє унікальні виклики, з якими стикаються технічні фахівці при роботі англійською.",
+                "about.skills": "Навички та кваліфікації",
+                "about.skill1": "Full-stack Developer",
+                "about.skill2": "Досвідчений викладач",
+                "about.skill3": "Філолог та перекладач за освітою",
+                "about.skill4": "Дипломований веб-розробник",
+                "about.experience": "Років досвіду",
+                "about.button": "Переглянути курси",
+                "courses.title": "Програми IT англійської",
+                "courses.subtitle": "Спеціалізовані курси, розроблені для допомоги розробникам та IT-фахівцям ефективно спілкуватися англійською",
+                "courses.button": "Записатись",
+                "courses.cta": "Отримати консультацію",
+                "courses.course1.title": "Підготовка до співбесіди",
+                "courses.course1.price": "$60/год",
+                "courses.course1.description": "Супер-кастомізована, стверено оремо для вас, програма для покращення розмовних навичок під час співбесіди",
+                "courses.course1.feature1": "Розбір найпопулярніших питань для вашої IT-спеціалізації",
+                "courses.course1.feature2": "Навчитеся відповідати на питання під час занять і вивчите корисні фрази",
+                "courses.course1.feature3": "Поради, як бути гнучким і показати свої сильні сторони",
+                "courses.course2.title": "5-денний інтенсив з IT-англійської для daily meetings для devs",
+                "courses.course2.price": "$99",
+                "courses.course2.description": "Прискорте свої навички IT англійської з цим комплексним курсом, який охоплює документацію, зустрічі, листи та технічні обговорення.",
+                "courses.course2.feature1": "Моделювання реальних мітингів в IT",
+                "courses.course2.feature2": "Необмежений за часом доступ до Notion з матеріалами до кожного заняття",
+                "courses.course2.feature3": "Сертифікат про проходження мого авторського інтенсиву",
+                "courses.course3.title": "IT-англійська",
+                "courses.course3.price": "$30/год",
+                "courses.course3.description": "Окрема програма для кожної позиції (Software Engineer, Project Manager тощо)",
+                "courses.course3.feature1": "Актуальна професійна IT-лексика (не бізнес-англійська, а саме ІТ)",
+                "courses.course3.feature2": "Моделювання реальних ситуацій в IT (мітинги, демо тощо)",
+                "courses.course3.feature3": " Quizlet-словник до кожного заняття – не потрібно записувати слова самостійно",
+                "courses.course4.title": "Розмовна англійська",
+                "courses.course4.price": "$25/год",
+                "courses.course4.description": "Покращіть свою плавність і впевненість у повсякденних робочих розмовах, стендапах і командних обговореннях.",
+                "courses.course4.feature1": "Нова тема на кожному занятті",
+                "courses.course4.feature2": "Навчитеся відповідати на суперечливі питання та дізнаєтеся цікаву інформацію на безліч тем (розвиваю не лише розмовні навички, а й обізнаність у різних сферах)",
+                "courses.course4.feature3": "Корисна лексика у Quizlet після кожного заняття",
+
+                "courses.course5.title": "Персональні заняття-оцінювання англійської у формі співбесіди",
+                "courses.course5.price": "$50/год",
+                "courses.course5.description": "Покращіть свою плавність і впевненість у повсякденних робочих розмовах, стендапах і командних обговореннях.",
+                "courses.course5.feature1": "Нова тема на кожному занятті",
+                "courses.course5.feature2": "Навчитеся відповідати на суперечливі питання та дізнаєтеся цікаву інформацію на безліч тем (розвиваю не лише розмовні навички, а й обізнаність у різних сферах)",
+                "courses.course5.feature3": "Корисна лексика у Quizlet після кожного заняття",
+
+                "stats.students": "Студентів",
+                "stats.years": "Років досвіду",
+                "stats.success": "Розмовної практики",
+                "stats.satisfaction": "Задоволених клієнтів",
+                "testimonials.title": "Що кажуть мої студенти",
+                "testimonials.subtitle": "Відгуки реальних студентів, які вже покращили свої навички IT англійської",
+                "testimonials.testimonial1.position": "Старший розробник в TechCorp",
+                "testimonials.testimonial1.text": "\"Імітація співбесіди з Іриною допомогла мені отримати роботу мрії в міжнародній компанії. Її зворотній зв'язок щодо моїх технічних пояснень був безцінним. Я перейшов від проблем з вираженням ідей до впевненого обговорення складних систем англійською.\"",
+                "testimonials.testimonial2.position": "Молодший розробник",
+                "testimonials.testimonial2.text": "\"5-денний Інтенсив був саме тим, що мені потрібно для підвищення впевненості на командних зустрічах. Ірина розуміє конкретну лексику, яка потрібна розробникам, і створює реалістичні сценарії для практики. Мої колеги вже помітили мої покращення!\"",
+                "testimonials.testimonial3.position": "Тімлід в DevSoft",
+                "testimonials.testimonial3.text": "\"Як не-носій англійської, який керує міжнародною командою, я стикався з труднощами у чіткій комунікації. Індивідуальні заняття з Іриною допомогли мені вдосконалити мої листи, стендапи та індивідуальні зустрічі. Її технічний досвід означає, що вона розуміє саме те, що потрібно розробникам.\"",
+                "calendar.title": "Перегляньте вільні години",
+                "calendar.subtitle": "Забронювати можна буде після заповнення форми",
+                "contact.title": "Готові покращити свою IT англійську?",
+                "contact.subtitle": "Зв'яжіться зі мною, щоб обговорити ваші потреби та запланувати перший урок. Я пропоную гнучкий графік для різних часових поясів.",
+                "contact.hours": "Понеділок - П'ятниця, 9:00 - 19:00 CET",
+                "contact.location": "Онлайн заняття з будь-якої точки світу",
+                "footer.description": "Спеціалістка з IT англійської, яка допомагає розробникам та IT-фахівцям ефективно спілкуватися англійською.",
+                "footer.links1": "Швидкі посилання",
+                "footer.links2": "Курси",
+                "footer.links3": "Контакти",
+                "footer.location": "Онлайн заняття",
+                "footer.rights": "Всі права захищені.",
+                "footer.privacy": "Політика конфіденційності",
+                "footer.terms": "Умови використання"
+            }
+        };
+
+        // Set default language to Ukrainian
+        let currentLanguage = 'uk';
+
+        // Function to change language
+        function changeLanguage(language) {
+            currentLanguage = language;
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[language][key]) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = translations[language][key];
+                    } else if (element.tagName === 'OPTION') {
+                        element.textContent = translations[language][key];
+                    } else {
+                        element.innerHTML = translations[language][key];
+                    }
+                }
+            });
+                        
+            // Update language switcher button
+            const langButton = document.querySelector('.language-switcher button');
+            if (language === 'en') {
+                langButton.innerHTML = '<img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag"><span class="ml-1">EN</span><i class="fas fa-chevron-down ml-1 text-xs"></i>';
+            } else {
+                langButton.innerHTML = '<img src="https://flagcdn.com/w20/ua.png" alt="Ukrainian" class="language-flag"><span class="ml-1">UA</span><i class="fas fa-chevron-down ml-1 text-xs"></i>';
+            }
+        }
+
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                                
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Initialize with Ukrainian language
+        document.addEventListener('DOMContentLoaded', function() {
+            changeLanguage('uk');
+            
+            // Add fade-in animation to elements when they come into view
+            const fadeElements = document.querySelectorAll('.fade-in')
+        })
+        
+    </script>
+</body>
+</html>

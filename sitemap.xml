@@ -1,42 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+   
    <url>
       <loc>https://varyitenglish.com/</loc>
       <lastmod>2025-08-02</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
-   </url>
-
-   <url>
-      <loc>https://varyitenglish.com/#about</loc>
-      <lastmod>2025-08-02</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://varyitenglish.com/#courses</loc>
-      <lastmod>2025-08-02</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://varyitenglish.com/#calendar</loc>
-      <lastmod>2025-08-02</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
-   </url>
-   <url>
-      <loc>https://varyitenglish.com/#blog</loc>
-      <lastmod>2025-08-02</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.6</priority>
-   </url>
-   <url>
-      <loc>https://varyitenglish.com/#contact</loc>
-      <lastmod>2025-08-02</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.5</priority>
    </url>
 
 </urlset>

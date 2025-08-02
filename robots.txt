@@ -1,0 +1,8 @@
+# Повідомити всіх пошукових роботів
+User-agent: *
+
+# Дозволити доступ до всього сайту
+Allow: /
+
+# Вказати шлях до файлу sitemap
+Sitemap: https://varyitenglish.com/sitemap.xml

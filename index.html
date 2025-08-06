@@ -41,7 +41,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -3291,7 +3291,10 @@
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-phone-alt text-gray-400 mr-3"></i>
-                            <span class="text-gray-400">+380 66 028 3611</span>
+                            <!-- <span class="text-gray-400">+380 66 028 3611</span> -->
+                            <a href="tel:+380663463611" class="text-gray-400 hover:text-primary transition">
+                                +380 66 028 3611
+                            </a>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-map-marker-alt text-gray-400 mr-3"></i>

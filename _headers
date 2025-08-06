@@ -1,0 +1,14 @@
+/img/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/img/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+
+/img/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/img/*.gif
+  Cache-Control: public, max-age=31536000, immutable
+
+/img/*.webp
+  Cache-Control: public, max-age=31536000, immutable
